@@ -33,6 +33,34 @@
                 }
             </script> 
         </div>
+        <div class="container2">
+            <form onsubmit="sendMail(); reset(); return false;">
+                <h3>GET IN TOUCH</h3>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="text" id="phone" placeholder="Phone no.">
+                <textarea id="message" name="message" placeholder="Message"></textarea>
+                <button class="btn" id="submit">Send</button>
+            </form>
+        </div>
+        <script></script>
+        <script>
+            function sendMail(){
+                Email.send({
+                    Host:'',
+                    Username: '',
+                    Password:'',
+                    To:'',
+                    From:'',
+                    Subject:'',
+                    Body:'',
+                    }).then(
+                        message => alert{
+                            "mail sent successfully"
+                            }
+                );
+            }
+        </script>
     </div>
 </body>
 </html>
