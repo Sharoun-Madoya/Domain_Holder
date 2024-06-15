@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="gif_container">
             <img src="assets/CarbonT.jpeg">
         </div>
@@ -32,32 +32,32 @@
                     document.getElementById('noButton').style.top = `${y}px`;
                 }
             </script> 
-        </div>
+        </div> -->
         <div class="container2">
             <form onsubmit="sendMail(); reset(); return false;">
                 <h3>GET IN TOUCH</h3>
                 <input type="text" id="name" name="name" placeholder="Name">
                 <input type="email" id="email" name="email" placeholder="Email">
                 <input type="text" id="phone" placeholder="Phone no.">
-                <textarea id="message" name="message" placeholder="Message"></textarea>
+                <textarea id="message" rows="4" name="message" placeholder="Message"></textarea>
                 <button class="btn" id="submit">Send</button>
             </form>
         </div>
-        <script></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script>
             function sendMail(){
                 Email.send({
-                    Host:'',
-                    Username: '',
-                    Password:'',
-                    To:'',
-                    From:'',
-                    Subject:'',
-                    Body:'',
+                    Host:'smtp.gmail.com',
+                    Username: 'madoyasharoun@gmail.com',
+                    Password:'SHAR0007',
+                    To:'sharoun.agamu@student.moringaschool.com',
+                    From: document.getElementById("email").value,
+                    Subject:'Start up enquiry',
+                    Body:'Good finally to get regstered',
                     }).then(
-                        message => alert{
+                        message => alert(
                             "mail sent successfully"
-                            }
+                        )
                 );
             }
         </script>
